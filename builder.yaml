@@ -3,6 +3,7 @@ components:
     rootDirectory: src/BackendDotnetAspnet
     role: web
     platform: dotnet
+    platformVersion: "10.0.12"
     path: /
     run:
       port: 8080

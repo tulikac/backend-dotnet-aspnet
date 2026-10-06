@@ -4,7 +4,7 @@ A small ASP.NET Core minimal API with no external service dependencies.
 
 ## Requirements
 
-- .NET 8 SDK
+- .NET 10 SDK
 
 ## Run locally
 
@@ -41,7 +41,8 @@ dotnet publish .\src\BackendDotnetAspnet -c Release -o .\publish
 
 The root `builder.yaml` declares one public .NET web component. Its
 `rootDirectory` points to the ASP.NET Core project so the test project is not
-part of the deployed component. The application starts from the compiled
+part of the deployed component. It pins .NET `10.0.12`, an SDK version available
+in the Builder Apps build image. The application starts from the compiled
 `BackendDotnetAspnet.dll`, listens on port `8080`, and reports readiness through
 `/health`.
 
