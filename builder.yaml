@@ -1,0 +1,10 @@
+components:
+  - name: web
+    rootDirectory: src/BackendDotnetAspnet
+    role: web
+    platform: dotnet
+    path: /
+    run:
+      port: 8080
+      start: dotnet BackendDotnetAspnet.dll
+      healthCheckPath: /health

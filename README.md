@@ -37,6 +37,14 @@ dotnet publish .\src\BackendDotnetAspnet -c Release -o .\publish
 .\publish\BackendDotnetAspnet.exe
 ```
 
+## Builder Apps configuration
+
+The root `builder.yaml` declares one public .NET web component. Its
+`rootDirectory` points to the ASP.NET Core project so the test project is not
+part of the deployed component. The application starts from the compiled
+`BackendDotnetAspnet.dll`, listens on port `8080`, and reports readiness through
+`/health`.
+
 ## Routes
 
 | Route | Purpose |
